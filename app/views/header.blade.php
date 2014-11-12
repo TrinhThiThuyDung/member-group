@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="{{Asset('/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{Asset('/css/main.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{Asset('/css/bootstrap-theme.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{Asset('/css/moduletables.css')}}"/>
 
 	
 	<script type="text/javascript" src = "{{Asset('/js/jquery-1.11.1.min.js')}}"></script>
