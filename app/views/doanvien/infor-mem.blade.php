@@ -1,17 +1,17 @@
 @extends('layout.layout-member')
 
  <?php 
-  /*if(!Session::has('id_mem')){
-      return Redirect::to('/login');
+  if(!Session::has('id_dv')){
+      return Redirect::to('/error');
    }
    else{
-	  $id_mem = Session::get('id_mem');
-   }*/
+	  $id_mem = Session::get('id_dv');
+   }
 
 ?>
 
 @section('title')
- <?php echo Session::get('name_mem'); ?>
+ <?php echo Session::get('name_dv'); ?> | Cổng thông tin Đoàn viên Thanh niên
 @endsection
 
 @section('content')
@@ -21,27 +21,27 @@
 			<table>
 				<tr>
 					<th>ID Member</th>
-					<td>1234</td>
+					<td><?php echo $id_mem; ?> </td>
 				</tr>
 				<tr>
 					<th>Full Name</th>
-					<td>Ngô Hưng</td>
+					<td><?php echo $member[0]->fullname; ?></td>
 				</tr>
 				<tr>
 					<th>Birthday</th>
-					<td>1991/04/02</td>
+					<td><?php echo $member[0]->birth; ?></td>
 				</tr>
 				<tr>
 					<th>Class</th>
-					<td>as1-k54</td>
+					<td><?php echo $member[0]->class; ?></td>
 				</tr>
 				<tr>
 					<th>Address</th>
-					<td>Hà nội</td>
+					<td><?php echo $member[0]->address; ?> </td>
 				</tr>	
 				<tr>
 					<th>Date Join</th>
-					<td>2006/04/06</td>
+					<td><?php echo $member[0]->date_assign; ?> </td>
 				</tr>
 			</table>
 		<br>

@@ -1,41 +1,41 @@
 @extends('layout.layout-member')
 
 @section('title')
-assessment result
+Kết quả đánh giá | Cổng thông tin Đoàn viên Thanh niên
 @endsection
 
 @section('content')
 <div class="content">
 			<div id="page-content">
-				<h2 id="page-title">Assessment Results</h2>
-				<b><font color="#000099">Member Information</font></b>
+				<h2 id="page-title">Kết quả đánh giá</h2>
+				<b><font color="#000099">Đoàn viên</font></b>
 				<table width="50%" id="infor">
 					<tr>
-						<th>ID Member:</th><td>xxx</td>
+						<th>Mã đoàn viên:</th><td>xxx</td>
 					</tr>
 					<tr>
-						<th>Full Name:</th><td>xxx</td>
+						<th>Họ tên:</th><td>xxx</td>
 					</tr>
 					<tr>
-						<th>Birthday:</th><td>xxx</td>
+						<th>Ngày sinh:</th><td>xxx</td>
 					</tr>
 					<tr>
-						<th>Class:</th><td>xxx</td>
+						<th>Lớp - Khóa:</th><td>xxx</td>
 					</tr>
 					<tr>
-						<th>Date Join:</th><td>xxx</td>
+						<th>Ngày vào đoàn:</th><td>xxx</td>
 					</tr>
 				</table>
 				<br />
 	
 				<hr />
-				<b><font color="#000099">Assessment Table</font></b>
+				<b><font color="#000099">Kết quả đánh giá</font></b>
 				<br />
 				<table width="100%" id="result">
 					<tr>
-						<th style="width: 20%;">Years</th>
-						<th style="width: 20%;">Result</th>
-						<th style="width: 60%;">Comment</th>
+						<th style="width: 20%;">Năm</th>
+						<th style="width: 20%;">Kết quả</th>
+						<th style="width: 60%;">Ghi chú</th>
 					</tr>
 					<tr>
 						<td>2010</td>

@@ -1,7 +1,6 @@
-@extends('layout.layout-member')
-
+@extends('layout.layout-manage')
 @section('title')
-Trang chủ | Cổng thông tin Đoàn viên Thanh niên
+Trang chủ | Cổng thông tin Đoàn Viên Thanh niên
 @endsection
 
 @section('content')
@@ -31,7 +30,17 @@ Trang chủ | Cổng thông tin Đoàn viên Thanh niên
                 								<a style="font-family: Arial,Helvetica,sans-serif;" class="mod-articles-category-title " href="">Thông Tin 1</a>
                 							</h4>
                 							<span class="mod-articles-category-date">08/11/2014</span>
+                						    <div class="tabs-button" align="left"> 
+                                                <div class="button-content" align="left">
+                                                    <button class="btn btn-primary button">Chỉnh sửa</button>
+                                                </div>
+                                            
+                                                <div class="button-content" align="left" style="position: absolute; left: 200px; margin-top:-33px;">
+                                                    <button class="btn btn-primary button">Xóa</button>
+                                                </div>
+                                            </div>	
                 						</li>
+
                 						<li>
                 							<h4>
                 								<a style="font-family: Arial,Helvetica,sans-serif;" class="mod-articles-category-title" href="">Thông Tin 2</a>
@@ -88,7 +97,6 @@ Trang chủ | Cổng thông tin Đoàn viên Thanh niên
 	</div>
 </div>
 @endsection
-
 @section('script')
 <script type="text/javascript">
       $('#home').addClass('active');

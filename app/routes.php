@@ -11,58 +11,13 @@
 |
 */
 
-Route::get('/', function()
-{
+Route::get('/',function(){
 	return View::make('doanvien.index');
 });
+//Route::post('/dang-nhap-thanh-cong','DangNhapController@dangnhapthanhcong');
 
-Route::get('/login',function(){
-	return View::make('doanvien.login');
-});
+Route::get('dang-nhap','DangNhapController@index');
+Route::post('kiem-tra-dang-nhap','DangNhapController@KiemTraDangNhap');
+Route::post('dang-nhap-thanh-cong','DangNhapController@DangNhapThanhCong');
 
-Route::get('/infor-mem',function(){
-	return View::make('doanvien.infor-mem');
-});
-
-Route::get('/assessment-result',function(){
-	return View::make('doanvien.assessment-results');
-});
-
-Route::get('/ask-and-answer',function(){
-	return View::make('doanvien.question');
-});
-
-Route::get('/admin/login-manage',function(){
-	return View::make('quanly.login');
-});
-
-Route::get('/admin/add-members',function(){
-	return View::make('quanly.add-member');
-});
-
-Route::get('/admin/search-member',function(){
-	return View::make('quanly.search-mem');
-});
-Route::get('/admin/good-member-list',function(){
-	return View::make('quanly.good-mem');
-});
-
-Route::get('/admin/not-school-fee-member-list',function(){
-	return View::make('quanly.not-fee');
-});
-
-Route::get('/admin/assessment-class',function(){
-	return View::make('quanly.assessment-class');
-});
-
-Route::get('/admin/post-news',function(){
-	return View::make('quanly.post-news');
-});
-
-Route::get('/admin/index',function(){
-	return View::make('quanly.admin-index');
-});
-
-Route::get('/admin/ask-and-answer',function(){
-	return View::make('quanly.answer');
-});
+Route::get('/thong-tin-doan-vien','ThongTinController@thongtin');

@@ -1,5 +1,5 @@
 <!doctype html>
-<<html>
+<html>
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<title>@yield('title')</title>
@@ -21,5 +21,5 @@
 </head>
 <body>
 	<div class="container">
-		<div class="header">
+		<div class="header"></div>
 		   
