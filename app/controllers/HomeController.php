@@ -15,9 +15,14 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
-	{
-		return View::make('hello');
+	public function homeDoanVien(){
+		$noti = ThongBao::getAllNoti();
+		$news = News::getAllNews();
+        
+		return View::make('doanvien.index')->with('noti',$noti)->with('news',$news);
+	}
+	public function adminHome(){
+		return View::make('quanly.home');
 	}
 
 }

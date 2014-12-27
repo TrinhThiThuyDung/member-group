@@ -1,29 +1,27 @@
 @extends('layout.layout-member')
-
+<?php 
+  if(!Session::has('id_dv')){
+      return Redirect::to('/dang-nhap');
+   }
+ else{
+ 	$name = Session::get('name_dv');
+ }
+?>
 @section('title')
-Kết quả đánh giá | Cổng thông tin Đoàn viên Thanh niên
+Kết quả đánh giá 
 @endsection
 
 @section('content')
-<div class="content">
+
 			<div id="page-content">
-				<h2 id="page-title">Kết quả đánh giá</h2>
-				<b><font color="#000099">Đoàn viên</font></b>
+				<h2 id="page-title">KẾT QUẢ ĐÁNH GIÁ</h2>
+				<b><font color="#000099">Đoàn viên: <?php echo $name; ?></font></b>
 				<table width="50%" id="infor">
 					<tr>
-						<th>Mã đoàn viên:</th><td>xxx</td>
+						<th>Mã đoàn viên:</th><td><?php echo $result[0]->id_mem; ?></td>
 					</tr>
 					<tr>
-						<th>Họ tên:</th><td>xxx</td>
-					</tr>
-					<tr>
-						<th>Ngày sinh:</th><td>xxx</td>
-					</tr>
-					<tr>
-						<th>Lớp - Khóa:</th><td>xxx</td>
-					</tr>
-					<tr>
-						<th>Ngày vào đoàn:</th><td>xxx</td>
+						<th>Họ tên:</th><td><?php echo $name; ?></td>
 					</tr>
 				</table>
 				<br />
@@ -38,23 +36,37 @@ Kết quả đánh giá | Cổng thông tin Đoàn viên Thanh niên
 						<th style="width: 60%;">Ghi chú</th>
 					</tr>
 					<tr>
-						<td>2010</td>
-						<td>bla bla</td>
-						<td>bla bla</td>
+						<td>Năm thứ nhất</td>
+						<td><?php if($result[0]->nam_1!=null){
+							     echo $result[0]->nam_1;}else{echo "Chưa có đánh giá";} ?></td>
+						<td>Không có</td>
 					</tr>
 					<tr>
-						<td>2011</td>
-						<td>bla bla</td>
-						<td>bla bla</td>
+						<td>Năm thứ hai</td>
+						<td><?php if($result[0]->nam_2!=null){
+							     echo $result[0]->nam_2;}else{echo "Chưa có đánh giá";}?></td>
+						<td>Không có</td>
 					</tr>
 					<tr>
-						<td>2012</td>
-						<td>bla bla</td>
-						<td>bla bla</td>
+						<td>Năm thứ ba</td>
+						<td><?php if($result[0]->nam_3!=null){
+							     echo $result[0]->nam_3;}else{echo "Chưa có đánh giá";}?></td>
+						<td>Không có</td>
+					</tr>
+					<tr>
+						<td>Năm thứ tư</td>
+						<td><?php if($result[0]->nam_4!=null){
+							     echo $result[0]->nam_4;}else{echo "Chưa có đánh giá";}?></td>
+						<td>Không có</td>
+					</tr>
+					<tr>
+						<td>Năm thứ năm</td>
+						<td><?php if($result[0]->nam_5!=null){
+							     echo $result[0]->nam_5;}else{echo "Chưa có đánh giá";}?></td>
+						<td>Không có</td>
 					</tr>
 				</table>
 			</div>
-		</div>
 
 @endsection
 

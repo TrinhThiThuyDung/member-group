@@ -25,9 +25,11 @@ background-color: #000066;
 	background-image: URL('../images/banner.png');
 }
 .footer {
+	
 	height: 10%;
 	background-color: #253c65;
 	color: #fff;
+	float: center;
 	padding-top:10px !important;
 	padding-bottom: 10px !important;
     margin-top: 15px;
@@ -37,6 +39,7 @@ background-color: #000066;
 	border-left: solid 7px #4573d5;
 	margin-bottom: 10px;
 	padding-left: 5px;
+	width: 70%;
 }
 
 span {
@@ -68,8 +71,10 @@ ul{
 }
 #page-content {
 	padding: 2px 10px 10px 10px;
-	min-width: 98% !important;
+	min-width: 70% !important;
+	max-width: 75% !important;
 	min-height: 98% !important;
+	float: left;
 }
 
 
@@ -102,6 +107,85 @@ ul{
 	font-size: 18px;
 }
 
+.item-page {
+    padding: 10px;
+    display: block;
+    overflow: hidden;
+}
+
+#right {
+    border: 0px solid #E6E6E6;
+    background: none repeat scroll 0% 0% #FFF;
+}
+#right {
+    float: right;
+    width: 25%;
+    padding: 80px 0px 5px;
+    position: relative;
+}
+#right .moduletable {
+    margin: 0px 0px 10px;
+}
+.moduletable {
+    margin: 0px;
+    padding: 0px;
+}
+#right h3 {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin: 0px;
+    font-weight: normal;
+}
+#right h3 span.backh {
+    padding: 0px;
+    display: block;
+}
+#right h3 span.backh2 {
+    background: none repeat scroll 0% 0% #FFF;
+    color: #555;
+    border-bottom: 1px solid #DDD;
+}
+#right h3 span.backh2 {
+    display: block;
+}
+#right .moduletable .mod_title {
+    background: url("../images/mod_title_background_noarr.png") repeat scroll left top #253C65;
+}
+#right h3 span.backh3 {
+    padding-left: 0px;
+}
+#right h3 span.backh3 {
+    display: block;
+}
+.moduletable .mod_title {
+    color: #FFF;
+    background: url("../images/mod_title_background.png") no-repeat scroll left top #7B88A1;
+    height: 35px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+}
+.moduletable .mod_icon {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#right ul {
+    list-style-image: url("../images/arrow.png");
+    list-style-position: inside;
+    vertical-align: middle;
+    margin: 8px 0px;
+    padding: 0px 8px;
+    position: relative;
+ }
+ .weblinks li {
+    padding: 2px 10px;
+}
+#right .moduletable {
+    margin: 0px 0px 10px;
+}
 /***************************************************/
 
 /**************CSS for table********************/
@@ -134,6 +218,8 @@ tbody {
 	margin: 0px;
 	padding: 0px 0px;
 	text-align: left;
+	
+	
 
 }
 .home-table h3{
@@ -245,3 +331,180 @@ tbody {
 }
 
 /***************************************************/
+
+/***************CSS for news******************/
+.gn_static_1 {
+    border: 1px solid #EFEFEF;
+    padding: 10px;
+    height: auto;
+    background-color: #FFF;
+    overflow: hidden;
+}
+.gn_title {
+    margin: 7px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.gn_date {
+    margin: 7px;
+}
+.gn_introtext {
+    margin: 3px;
+    font-size: 12px;
+}
+.article-info {
+    color: #444;
+}
+.article-info {
+    margin: 10px 0px;
+    font-size: 0.9em;
+}
+.archive .article-info dd, .article-info dd {
+    margin: 2px 0px 0px;
+    line-height: 1.2em;
+}
+/*************************************************/
+/*******************CSS for form  noti********************/
+form#adminForm {
+    border: 0px solid #000;
+    padding-top: 4px;
+}
+fieldset.filters {
+    border: 0px solid #DDD;
+}
+fieldset {
+    border: 0px solid #CCC;
+}
+fieldset {
+    margin: 10px 0px;
+    padding: 15px 0px;
+    border: 1px solid;
+}
+.display-limit, .filter {
+    text-align: right;
+    margin-right: 7px;
+}
+table.weblinks, table.category {
+    font-size: 1em;
+    margin: 10px 10px 20px 0px;
+    width: 99%;
+}
+tr, td {
+    border: 1px solid #DDD;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    padding: 7px;
+}
+tr.odd, .cat-list-row1 {
+    background: url("../images/news.gif") repeat-x scroll 0% 0% transparent;
+}
+#main .pagination {
+    border-top: 1px solid #DDD;
+    clear: both;
+    text-align: center;
+}
+#main .pagination {
+    margin: 10px 0px;
+    padding: 10px 0px;
+    clear: both;
+}
+p.counter {
+    font-weight: bold;
+}
+#main .pagination ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+#main ul {
+    list-style: outside none none;
+    padding: 10px;
+}
+#main .pagination li.pagination-start, #main .pagination li.pagination-start span {
+    padding: 0px;
+}
+#main .pagination li.pagination-start, #main .pagination li.pagination-next, #main .pagination li.pagination-end, #main .pagination li.pagination-prev {
+    border: 0px none;
+}
+#main .pagination li {
+    display: inline;
+    padding: 2px 5px;
+    text-align: left;
+    border: 0px solid #EEE;
+    margin: 0px 2px;
+}
+#main ul li {
+}
+#main ul li, #main ol li {
+    padding: 0px;
+    line-height: 1.7em;
+    margin: 0px;
+}
+#main .pagination li.pagination-start, #main .pagination li.pagination-start span {
+    padding: 0px;
+}
+.pagenav {
+    padding: 2px;
+    clear: both;
+}
+.list-title{
+	width: 80%;
+}
+.list-date{
+	text-align: center;
+}
+/*******************************************************/
+
+/*********************CSS for news**********************/
+.blog {
+    padding: 10px;
+}
+.items-row {
+    overflow: hidden;
+    margin-bottom: 10px !important;
+}
+.items-row h2 {
+    font-weight: normal;
+    padding: 5px 2px;
+    font-size: 1.4em;
+    border-top: 1px solid #DDD;
+border-bottom: 1px solid #DDD;
+}
+.cols-1 {
+    display: block;
+    float: none !important;
+    margin: 0px !important;
+}
+.column-1, .column-2 {
+    border: 0px solid;
+}
+.item {
+    padding: 0px 5px 10px;
+    display: block;
+}
+.column-1, .column-2, .column-3 {
+    padding: 10px 5px;
+}
+.readmore a:link, .readmore a:visited, a.readmore:link, a.readmore:visited {
+    color: #095197;
+    background: url("../images/nature/arrow1.gif") no-repeat scroll left top #EEE;
+    border: 1px solid #DDD;
+}
+ .readmore a {
+    font-weight: bold;
+    padding: 2px 5px 2px 10px;
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+}
+.row-separator {
+    display: block;
+    clear: both;
+    margin: 0px;
+    border: 0px none;
+    height: 1px;
+}
+/******************************************************/

@@ -2,7 +2,7 @@
 
  <?php 
   if(!Session::has('id_dv')){
-      return Redirect::to('/error');
+      return Redirect::to('/dang-nhap/index');
    }
    else{
 	  $id_mem = Session::get('id_dv');
@@ -15,42 +15,39 @@
 @endsection
 
 @section('content')
-<div class="content">
+
 	<div id="page-content">
-		<h2 id="page-title">Member Information</h2>
+		<h2 id="page-title">THÔNG TIN ĐOÀN VIÊN</h2>
 			<table>
 				<tr>
-					<th>ID Member</th>
+					<th>Mã đoàn viên</th>
 					<td><?php echo $id_mem; ?> </td>
 				</tr>
 				<tr>
-					<th>Full Name</th>
+					<th>Họ và tên</th>
 					<td><?php echo $member[0]->fullname; ?></td>
 				</tr>
 				<tr>
-					<th>Birthday</th>
+					<th>Ngày sinh</th>
 					<td><?php echo $member[0]->birth; ?></td>
 				</tr>
 				<tr>
-					<th>Class</th>
+					<th>Lớp - Khóa</th>
 					<td><?php echo $member[0]->class; ?></td>
 				</tr>
 				<tr>
-					<th>Address</th>
+					<th>Địa chỉ</th>
 					<td><?php echo $member[0]->address; ?> </td>
 				</tr>	
 				<tr>
-					<th>Date Join</th>
+					<th>Ngày vào đoàn</th>
 					<td><?php echo $member[0]->date_assign; ?> </td>
 				</tr>
 			</table>
 		<br>
-	    <div align="left">
-		    <input type="button" class="btn btn-primary" value="button">
-		    <input type="button" class="btn btn-primary" value="button">
-	    </div>
+	    
 	</div>
-</div>
+
 @endsection
 
 @section('script')

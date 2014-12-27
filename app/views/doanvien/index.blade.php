@@ -1,12 +1,12 @@
 @extends('layout.layout-member')
 
 @section('title')
-Trang chủ | Cổng thông tin Đoàn viên Thanh niên
+Trang chủ 
 @endsection
 
 @section('content')
-<div class="content">
-	<div id="page-content">
+<?php $url = URL::to('/'); ?>
+	<div id="page-content" style="max-width: 70%;">
 		<h2 id="page-title">Trang chủ</h2>
 		<div class = "home-table">
 			<h3 style="font-family:  Arial,Helvetica,sans-serif;">
@@ -26,18 +26,16 @@ Trang chủ | Cổng thông tin Đoàn viên Thanh niên
                 			<div class="tab-content selected" title="sj_module_2load:119">
                 				<div class="moduletable">
                 					<ul style="padding-left:10px;" class="category-module">
-                						<li>
-                							<h4>
-                								<a style="font-family: Arial,Helvetica,sans-serif;" class="mod-articles-category-title " href="">Thông Tin 1</a>
+                                        <?php $total_noti = count($noti); 
+                                          for ($i=0; $i < $total_noti ; $i++) { 
+                                          ?>
+                						<li style="border-bottom: 1px solid #DDD;">
+                							<h4 style="font-size: 1em; font-weight: bold;">
+                								<a style="font-family: Arial,Helvetica,sans-serif;" class="mod-articles-category-title " href="<?php echo $url.'/thong-bao/'.$noti[$i]->id; ?>"><?php echo $noti[$i]->title; ?></a>
                 							</h4>
-                							<span class="mod-articles-category-date">08/11/2014</span>
+                							<span class="mod-articles-category-date"><?php echo $noti[$i]->date; ?></span>
                 						</li>
-                						<li>
-                							<h4>
-                								<a style="font-family: Arial,Helvetica,sans-serif;" class="mod-articles-category-title" href="">Thông Tin 2</a>
-                							</h4>
-                							<span class="mod-articles-category-date">08/11/2014</span>
-                						</li>
+                                        <?php } ?>
                 					</ul>
                 				</div>
                 			</div>
@@ -64,20 +62,35 @@ Trang chủ | Cổng thông tin Đoàn viên Thanh niên
                 		<div class="tabs-content-inner">
                 			<div class="tab-content selected" title="sj_module_2load:119">
                 				<div class="moduletable">
-                					<ul style="padding-left:10px;" class="category-module">
-                						<li>
-                							<h4>
-                								<a style="font-family: Arial,Helvetica,sans-serif;" class="mod-articles-category-title " href="">Tin tức 1</a>
-                							</h4>
-                							<span class="mod-articles-category-date">08/11/2014</span>
-                						</li>
-                						<li>
-                							<h4>
-                								<a style="font-family: Arial,Helvetica,sans-serif;" class="mod-articles-category-title" href="">Tin tức 2</a>
-                							</h4>
-                							<span class="mod-articles-category-date">08/11/2014</span>
-                						</li>
-                					</ul>
+                					<div style="float: left; width: 100%">
+                                        <div class="globalnews" style="margin: 2px;">
+                                            <?php $url_image = $url."/images/news/"; 
+                                            $total_news = count($news);
+                                            for ($i=0; $i < $total_news ; $i++) { 
+                                             ?>
+                                            <div class="gn_static gn_static_1">
+                                                <div class="gn_title">
+                                                    <a href="<?php echo $url.'/tin-tuc/'.$news[$i]->id; ?>"><?php echo $news[$i]->title; ?></a>
+                                                </div>
+                                                <div class="gn_date"><?php echo $news[0]->date; ?></div>
+                                                <div class="gn_introtext">
+                                                    <p><img src="<?php echo $url_image.$news[$i]->image; ?>" style="float: left; height: 105px; width: 140px;"></p>
+                                                    <p style="text-align: justify;">
+                                                        <span style="font-size:12px;">
+                                                            <span style="font-family:arial,helvetica,sans-serif;">
+                                                                <?php echo $news[$i]->content; ?>
+                                                            </span>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                                <div class="gn_readmore">
+                                                    <a href="<?php echo $url.'/tin-tuc/'.$news[$i]->id; ?>">Chi tiết...</a>
+                                                </div>
+                                            </div>
+                                            <?php } ?>
+                                        </div>
+
+                                    </div>
                 				</div>
                 			</div>
                 		</div>
@@ -86,7 +99,7 @@ Trang chủ | Cổng thông tin Đoàn viên Thanh niên
 			</div>
 		</div>
 	</div>
-</div>
+
 @endsection
 
 @section('script')

@@ -1,7 +1,7 @@
 @extends('layout.layout-manage')
 
 @section('title')
-post news
+Đăng tin
 @endsection
 
 @section('content')

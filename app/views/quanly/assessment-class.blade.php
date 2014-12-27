@@ -1,7 +1,7 @@
 @extends('layout.layout-manage')
 
 @section('title')
-assessment class
+Đánh giá
 @endsection
 
 @section('content')

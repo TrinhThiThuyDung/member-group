@@ -1,7 +1,7 @@
 @extends('layout.layout-manage')
 
 @section('title')
-add member
+Thêm đoàn viên
 @endsection
 
 @section('content')

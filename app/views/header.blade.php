@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-	<title>@yield('title')</title>
+	<title>@yield('title')| Cổng thông tin điện tử Đoàn viên Thanh niên</title>
 	<script type="text/javascript"></script>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="{{Asset('/images/ico/favicon.ico')}}"/>
@@ -20,7 +20,5 @@
 
 	@yield('style')
 </head>
-<body>
-	<div class="container">
-		<div class="header"></div>
+
 		   

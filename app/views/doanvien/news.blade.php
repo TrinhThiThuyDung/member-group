@@ -5,37 +5,32 @@ Tin tức | Cổng thông tin Đoàn Viên Thanh niên
 
 @section('content')
 <div id="page-content">
-		<h2 id="page-title">Tin tức</h2>
-		<div class = "home-table">
-			<div id="span-table-index" class="moduletabs top-position clearfix">
-                <div class="tabs-content-wrap">
-                	<div class="tabs-content">
-                		<div class="tabs-content-inner">
-                			<div class="tab-content selected" title="sj_module_2load:119">
-                				<div class="moduletable">
-                					<ul style="padding-left:10px;" class="category-module">
-                						<li>
-                							<h4>
-                								<a style="font-family: Arial,Helvetica,sans-serif;" class="mod-articles-category-title " href="">Thông Tin 1</a>
-                							</h4>
-                							<span class="mod-articles-category-date">08/11/2014</span>
-                						    
-                						</li>
-
-                						<li>
-                							<h4>
-                								<a style="font-family: Arial,Helvetica,sans-serif;" class="mod-articles-category-title" href="">Thông Tin 2</a>
-                							</h4>
-                							<span class="mod-articles-category-date">08/11/2014</span>
-                						</li>
-                					</ul>
-                				</div>
-                			</div>
-                		</div>
-                	</div>
+		<h2 id="page-title">TIN TỨC</h2>
+		<div class="blog">
+            <?php  $total = count($news); 
+            for ($i=0; $i < $total ; $i++) { 
+            ?>
+            <div class="items-row cols-1 row-0">
+                <div class="item column-1">
+                    <h2><a href="<?php echo URL::to('/').'/tin-tuc/'.$news[$i]->id; ?>"><?php echo $news[$i]->title; ?></a></h2>
                 </div>
-			</div>
-		</div>
+                <dl class="article-info">
+                    <dd class="published">Được đăng ngày <?php echo $news[$i]->date; ?></dd>
+                </dl>
+                <p>
+                    <img style="float: left; height: 105px; width: 140px;" src="<?php echo URL::to('/').'/images/news/'.$news[$i]->image; ?>" alt=""></img>
+                </p>
+                <p style="text-align: justify;">
+                    <span style="font-size:12px;">
+                        <span style="font-family:arial,helvetica,sans-serif;"><?php echo $news[$i]->content; ?></span>
+                    </span>
+                </p>
+                <p class="readmore"><a href="<?php echo URL::to('/').'/tin-tuc/'.$news[$i]->id; ?>">Xem thêm</a></p>
+            </div>
+            <span class="row-separator"></span>
+            <?php }?>
+        </div>
+</div>
 
 @endsection
 

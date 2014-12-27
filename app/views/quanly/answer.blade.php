@@ -1,11 +1,11 @@
 @extends('layout.layout-manage')
 
 @section('title')
-ask and answer
+Hỏi và Trả lời
 @endsection
 
 @section('content')
-<div class="content">
+
 			<div id="page-content">
 				<h2 id="page-title">Ask and Asnwer</h2>
 
@@ -27,7 +27,7 @@ ask and answer
 				    				
 
 				</div>
-			</div>
+		
 	
 @endsection
 @section('script')

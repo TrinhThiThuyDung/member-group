@@ -1,7 +1,7 @@
 @extends('layout.layout-manage')
 
 @section('title')
-search member
+Tìm kiếm đoàn viên
 @endsection
 
 @section('content')

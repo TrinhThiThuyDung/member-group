@@ -1,10 +1,9 @@
 @extends('layout.layout-manage')
 @section('title')
-Trang chủ | Cổng thông tin Đoàn Viên Thanh niên
+Trang chủ 
 @endsection
 
 @section('content')
-<div class="content">
 	<div id="page-content">
 		<h2 id="page-title">Trang chủ</h2>
 		<div class = "home-table">
@@ -95,7 +94,7 @@ Trang chủ | Cổng thông tin Đoàn Viên Thanh niên
 			</div>
 		</div>
 	</div>
-</div>
+
 @endsection
 @section('script')
 <script type="text/javascript">

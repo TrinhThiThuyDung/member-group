@@ -7,7 +7,11 @@ else{
 	$id_mem = Session::get('id_mana');
 }*/
 ?>
-<div id="panel">
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="content">
+           <div id="panel">
             <ul class="nav nav-pills">
                 <li style="max-height: 40px;"><a href="<?php echo URL::to('/') ?>/admin/index">Trang chủ</a></li>    
 				<li id="assessment" ><a href="<?php echo URL::to('/') ?>/admin/">Thông tin quản lý</a></li>
@@ -38,12 +42,12 @@ else{
                 </li>
             </ul>
         </div>
-   
-        @yield('content')
-
+         @yield('content')
+</div>
+</div>
 @include('footer')
   
- </div>
+ 
 </body>
 </html>
 

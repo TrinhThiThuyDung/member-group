@@ -1,7 +1,7 @@
 @extends('layout.layout-manage')
 
 @section('title')
-list good member
+Danh sách đoàn viên gương mẫu
 @endsection
 
 @section('content')
