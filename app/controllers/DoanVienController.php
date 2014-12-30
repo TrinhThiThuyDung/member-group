@@ -102,15 +102,39 @@ class DoanVienController extends BaseController
 	}
 	public function Timkiem(){
 	
-$id = Input::get('id');
-$name = Input::get('name');
-$class = Input::get('lop');
-$khoa = Input::get('khoa');
+    $id = Input::get('id');
+    $name = Input::get('name');
+    $class = Input::get('lop');
+    $khoa = Input::get('khoa');
 		$result = DoanVien::getThongTinDoanVien($id,$name,$class,$khoa);
 		if($result==null){
 			return Response::json(0);
 		}
 		return Response::json($result);
 	}
+	public function getDoanVien(){
+		$result = DoanVien::getDoanVien();
+
+		return $result;
+	}
+
+	public function danhGia(){
+		$hocky = $_POST['hocky'];
+		$result = $_POST['result'];
+        
+        if($hocky==1){
+             foreach ($result as $key => $value) {
+			DB::table('assessment')->insert(array("id_mem"=>$value['id'],"ky1"=>$value['result_dg']));
+		   }
+        }
+        else{
+        	foreach ($result as $key => $value) {
+			DB::table('assessment')->where("id_mem",$value['id'])->update(array("ky2"=>$value['result_dg']));
+		   }
+        }
+        return Response::json(1);
+		
+	}
+	
 }
 ?>

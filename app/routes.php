@@ -59,6 +59,7 @@ Route::post('/admin/cap-nhap/{id_loai}/{id_tin}','TinTucController@CapNhat');
 Route::get('/admin/xoa-tin-tuc/{id_loai}/{id_tin}','TinTucController@xoaTinTuc');
 Route::get('/admin/dang-tin/','TinTucController@DangTin');
 Route::post('/admin/dang-tin-moi','TinTucController@DangTinMoi');
+Route::get('/admin/chi-tiet-tin/{loai}/{id_tin}','TinTucController@getTinTuc');
 
 Route::get('/admin/them-doan-vien','DoanVienController@themDoanVien');
 Route::post('/admin/them-moi','DoanVienController@themDoanVienMoi');
@@ -71,4 +72,8 @@ Route::post('/admin/danh-sach-guong-mau','DoanVienController@LayDanhSachGuongMau
 
 Route::get('/admin/danh-sach-doan-vien-yeu-kem','DoanVienController@DoanVienYeuKem');
 Route::post('/admin/danh-sach-yeu-kem','DoanVienController@LayDanhSachYeuKem');
+
+
+Route::post('/admin/cap-nhat-danh-gia','DoanVienController@danhGia');
+
 /***************************************************************/

@@ -31,40 +31,23 @@ Kết quả đánh giá
 				<br />
 				<table width="100%" id="result">
 					<tr>
-						<th style="width: 20%;">Năm</th>
-						<th style="width: 20%;">Kết quả</th>
-						<th style="width: 60%;">Ghi chú</th>
+						<th style="width: 30%;">Học kỳ</th>
+						<th style="width: 70%;">Kết quả</th>
+						
 					</tr>
 					<tr>
-						<td>Năm thứ nhất</td>
-						<td><?php if($result[0]->nam_1!=null){
-							     echo $result[0]->nam_1;}else{echo "Chưa có đánh giá";} ?></td>
-						<td>Không có</td>
+						<td>Học kỳ 1</td>
+						<td><?php if($result[0]->ky1!=null){
+							     echo $result[0]->ky1;}else{echo "Chưa có đánh giá";} ?></td>
+						
 					</tr>
 					<tr>
-						<td>Năm thứ hai</td>
-						<td><?php if($result[0]->nam_2!=null){
-							     echo $result[0]->nam_2;}else{echo "Chưa có đánh giá";}?></td>
-						<td>Không có</td>
+						<td>Học kỳ 2</td>
+						<td><?php if($result[0]->ky2!=null){
+							     echo $result[0]->ky2;}else{echo "Chưa có đánh giá";}?></td>
+						
 					</tr>
-					<tr>
-						<td>Năm thứ ba</td>
-						<td><?php if($result[0]->nam_3!=null){
-							     echo $result[0]->nam_3;}else{echo "Chưa có đánh giá";}?></td>
-						<td>Không có</td>
-					</tr>
-					<tr>
-						<td>Năm thứ tư</td>
-						<td><?php if($result[0]->nam_4!=null){
-							     echo $result[0]->nam_4;}else{echo "Chưa có đánh giá";}?></td>
-						<td>Không có</td>
-					</tr>
-					<tr>
-						<td>Năm thứ năm</td>
-						<td><?php if($result[0]->nam_5!=null){
-							     echo $result[0]->nam_5;}else{echo "Chưa có đánh giá";}?></td>
-						<td>Không có</td>
-					</tr>
+					
 				</table>
 			</div>
 

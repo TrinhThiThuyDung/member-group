@@ -29,7 +29,7 @@ Quản lý tin tức
                                           ?>
                 						<li>
                 							<h4>
-                								<a style=" font-size: 15px; font-family: Arial,Helvetica,sans-serif;" class="mod-articles-category-title " href=""><?php echo $noti[$i]->title; ?></a>
+                								<a style=" font-size: 15px; font-family: Arial,Helvetica,sans-serif;" class="mod-articles-category-title " href="<?php echo URL::to('/').'/admin/chi-tiet-tin/1/'.$noti[$i]->id; ?>"><?php echo $noti[$i]->title; ?></a>
                 							</h4>
                 							<span class="mod-articles-category-date">Đăng ngày <?php echo $noti[$i]->date; ?></span>
                 						    <div class="tabs-button" align="left"> 
@@ -78,7 +78,7 @@ Quản lý tin tức
                                              ?>
                 						<li>
                 							<h4>
-                								<a style="font-size: 15px; font-family: Arial,Helvetica,sans-serif;" class="mod-articles-category-title " href=""><?php echo $news[$i]->title;?> </a>
+                								<a style="font-size: 15px; font-family: Arial,Helvetica,sans-serif;" class="mod-articles-category-title " href="<?php echo URL::to('/').'/admin/chi-tiet-tin/2/'.$news[$i]->id; ?>"><?php echo $news[$i]->title;?> </a>
                 							</h4>
                 							<span class="mod-articles-category-date">Đăng ngày <?php echo $news[$i]->date; ?></span>
                                             <div class="tabs-button" align="left">

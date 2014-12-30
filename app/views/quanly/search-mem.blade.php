@@ -83,6 +83,9 @@ $(document).ready(function(){
               $('#sum').html("<b>Không tìm thấy đoàn viên</b>");
            }
            else{
+           	$('#sum').html("");
+
+           	$('#sum').html("<b>Tìm thấy "+data.length+" đoàn viên</b>");
            	for (var i = 0; i < data.length ; i++) {
    					var html = "<tr style='background:#FFF'>"+
    					           "<td style='text-align: center;'>"+ data[i].id +"</td>"+

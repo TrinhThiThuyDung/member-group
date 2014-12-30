@@ -106,5 +106,15 @@ class TinTucController extends BaseController
         }
         return Redirect::to('/admin/dang-tin');
 	}
+	public function getTinTuc($loai,$id_tin){
+		if($loai==1){
+			$news = ThongBao::getNoti($id_tin);
+		}
+		else{
+			$news = News::getNews($id_tin);
+		}
+
+		return View::make('quanly.news-detail')->with('news',$news);
+	}
 }
 ?>

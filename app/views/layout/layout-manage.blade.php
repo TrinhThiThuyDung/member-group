@@ -36,10 +36,7 @@ else{
                 
                 <li id="assessment" ><a href="<?php echo URL::to('/') ?>/admin/assessment-class">Đánh giá</a></li>
  
-            <?php } elseif($id_admin==4){ ?>
-                
-				<li id="ask-answer"><a href="<?php echo URL::to('/') ?>/admin/ask-and-answer" >Hỏi & Trả lời</a></li>
-               <?php }?>
+            <?php } ?>
                 <?php if(Session::has('id_admin')){ 
                     $fullname = Session::get('fullname'); ?>
                 <li class="dropdown pull-right" >

@@ -37,10 +37,8 @@ class HomeController extends BaseController {
 				return View::make('quanly.trangchu-tintuc')->with('noti',$noti)->with('news',$news);
 			}
 			elseif($id_admin==3){
-				return View::make('quanly.trangchu-danhgia');
-			}
-			elseif($id_admin==4){
-				return View::make('quanly.trangchu-hoidap');
+				$members = DoanVien::getDoanVien();
+				return View::make('quanly.trangchu-danhgia')->with('members',$members);
 			}
 			
 		}

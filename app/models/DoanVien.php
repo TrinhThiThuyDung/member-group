@@ -16,9 +16,13 @@ class DoanVien extends Eloquent{
 
 	public static function getThongTinDoanVien($id,$name,$lop,$khoa){
 		$query = "SELECT members.* FROM members
-		          WHERE members.id = '$id' or members.fullname LIKE '%$name%' or members.class = '$lop' or members.khoa = '$khoa' ";
+		          WHERE members.id = '$id' or members.fullname LIKE '$name' or members.class = '$lop' or members.khoa = '$khoa' ";
 
 		$result = DB::select($query);
+		return $result;
+	}
+	public static function getDoanVien(){
+		$result = self::select("id","fullname","class")->get();
 		return $result;
 	}
 } 
