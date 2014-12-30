@@ -11,5 +11,9 @@ class ThongBao extends Eloquent{
 		$noti = self::find($id_noti);
 		return $noti;
 	}
+	public static function xoaThongBao($id){
+		$news = self::where('id',$id)->delete();
+	}
+	
 }
 ?>

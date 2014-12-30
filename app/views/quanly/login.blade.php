@@ -9,7 +9,7 @@
 <div id="page-content"  style="width: 100%;">
 	<div id="login">
 		<h2 class="tit">Đăng nhập Quản lý</h2>
-		<form id="login-admin" method="post" action="<?php echo URL::to('/') ?>/admin/dang-nhap/dang-nhap-thanh-cong-admin">
+		<form id="login-admin" method="get" action="<?php echo URL::to('/') ?>/admin/dang-nhap/dang-nhap-thanh-cong-admin">
 			<div class="box_cont">			
 				<dl>
 					<dt id ="error" style="font-size: 13px; color: red;">

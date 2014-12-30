@@ -10,5 +10,9 @@ class News extends Eloquent{
 		$news = self::find($id_news);
 		return $news;
 	}
+	public static function xoaTin($id){
+		$news = self::where('id',$id)->delete();
+	}
+	
 }
 ?>

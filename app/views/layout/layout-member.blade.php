@@ -10,7 +10,7 @@
 				<li id="news"><a href="<?php echo URL::to('/') ?>/tin-tuc" >Tin tức</a></li>
 				<li id="result"><a href="<?php echo URL::to('/') ?>/ket-qua-danh-gia/" >Kết quả đánh gíá</a></li>
 				<li id="infor"><a href="<?php echo URL::to('/') ?>/thong-tin-doan-vien" >Thông tin đoàn viên</a></li>
-				<li id="question"><a href="<?php echo URL::to('/') ?>/ask-and-answer" >Hỏi & Đáp</a></li>
+				
                
                 <li class="dropdown pull-right">
                     <?php if(!Session::has('id_dv')) {?>

@@ -7,7 +7,7 @@ Hỏi và Trả lời
 @section('content')
 
 			<div id="page-content">
-				<h2 id="page-title">Ask and Asnwer</h2>
+				<h2 id="page-title">Trả lời thắc mắc</h2>
 
 					<hr>
                     <div id="ask-asnwer">
@@ -16,7 +16,7 @@ Hỏi và Trả lời
 						Question:
 					</b>
 					<p>cho e hoi... nhung sinh vien thuoc dien mien 100% hoc phi tai sao van phai dong hoc phi a? khi nao thi duoc nhan lai va lam sao de nhan lai tien hoc phi a?</p>
-                    <button  type="submit" class="btn btn-primary bt-answer" >Answer</button>
+                    <button  type="submit" class="btn btn-primary bt-answer" >Trả lời</button>
                     </div>
                     
 
@@ -32,7 +32,8 @@ Hỏi và Trả lời
 @endsection
 @section('script')
 <script type="text/javascript">
-$('#answer').addClass('active');
+$('#home').addClass('active');
+$('#ask-answer').addClass('active');
 $(document).ready(function(){
 	$('button.bt-answer').click(function(){
        var parent = $(this).parent();

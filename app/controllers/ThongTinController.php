@@ -32,5 +32,6 @@ class ThongTinController extends BaseController{
          return View::make('doanvien.ask')->with('ask',$question);
       }
    }
+   
 }
 ?>

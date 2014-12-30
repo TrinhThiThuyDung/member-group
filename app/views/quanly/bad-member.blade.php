@@ -1,13 +1,13 @@
 @extends('layout.layout-manage')
 
 @section('title')
-Danh sách đoàn viên gương mẫu
+Danh sách đoàn viên yếu kém
 @endsection
 
 @section('content')
 <div class="content">
 			<div id="page-content">
-				<h2 id="page-title">Danh Sách Đoàn Viên Gương Mẫu</h2>
+				<h2 id="page-title">Danh Sách Đoàn Viên Yếu Kém</h2>
 				
 				<br />
 				<table>
@@ -26,7 +26,7 @@ Danh sách đoàn viên gương mẫu
 							</select>
 						</td>
 					</tr>
-				
+					
 				</table>
 				<br>
 				<div align="left">
@@ -41,11 +41,10 @@ Danh sách đoàn viên gương mẫu
 					<th style="width:25%;text-align: center;">Lớp</th>
 					<th style="width:20%;text-align: center;">Đánh giá kỳ 1</th>
 					<th style="width:20%;text-align: center;">Đánh giá kỳ 2</th>
-					
-
+				  </tr>
+				  <tr style="background:#FFF">
 					
 				  </tr>
-				
 				</table>
 			</div>
 		</div>
@@ -54,7 +53,7 @@ Danh sách đoàn viên gương mẫu
 @section('script')
 <script type="text/javascript">
 $('#list').addClass('active');
-$('#good').addClass('active');
+$('#fee').addClass('active');
 $(document).ready(function(){
 	var hostname = location.protocol+'//'+location.hostname;
             
@@ -69,7 +68,7 @@ $(document).ready(function(){
 
    	$.ajax({
    		type: 'post',
-   		url: hostname+'admin/danh-sach-guong-mau',
+   		url: hostname+'admin/danh-sach-yeu-kem',
    		data: {
    			year: year
    		},

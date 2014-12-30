@@ -93,8 +93,8 @@ ul{
 	padding: 2px 5px !important;
 	border-radius: 5px !important;
 	box-shadow: 2px 2px 2px #a9a9a9 inset !important;
-	width: 98% !important;
-	height: 25px !important;
+	min-width: 98% !important;
+	min-height: 25px !important;
 }
 .w_100 {
 	width: 100px !important;

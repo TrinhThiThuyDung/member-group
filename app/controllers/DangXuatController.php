@@ -14,8 +14,10 @@ class DangXuatController extends BaseController
 		}
 	}
 	public function dangXuatAdmin(){
-		if (Session::has('admin')) {
-			//
+		if (Session::has('id_admin')) {
+			Session::forget('id_admin');
+			Session::forget('fullname');
+			return Redirect::to('/admin/dang-nhap/login-admin');
 		}
 	}
 }

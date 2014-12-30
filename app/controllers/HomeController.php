@@ -22,7 +22,29 @@ class HomeController extends BaseController {
 		return View::make('doanvien.index')->with('noti',$noti)->with('news',$news);
 	}
 	public function adminHome(){
-		return View::make('quanly.home');
+		if(!(Session::has('id_admin'))){
+			return Redirect::to('/admin/dang-nhap/login-admin');
+		}
+		else{
+			$id_admin = Session::get('id_admin');
+			if($id_admin==1){
+				return View::make('quanly.search-mem');
+			}
+			elseif($id_admin==2){
+				$noti = ThongBao::getAllNoti();
+				$news = News::getAllNews();
+
+				return View::make('quanly.trangchu-tintuc')->with('noti',$noti)->with('news',$news);
+			}
+			elseif($id_admin==3){
+				return View::make('quanly.trangchu-danhgia');
+			}
+			elseif($id_admin==4){
+				return View::make('quanly.trangchu-hoidap');
+			}
+			
+		}
+		
 	}
 
 }
